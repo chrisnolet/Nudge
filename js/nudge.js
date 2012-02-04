@@ -30,7 +30,7 @@ var _target = null;
 $(document).ready(function() {
 	
 	// Add Bootstrap
-	var bootstrap = '<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css"/>';
+	var bootstrap = '<link rel="stylesheet" href="https://raw.github.com/chrisnolet/Nudge/master/css/bootstrap.css"/>';
 	$('head').append(bootstrap);
 	
 	// Add topbar
@@ -72,14 +72,21 @@ $(document).ready(function() {
 
 function onClick(event) {
 	
+	// Prevent default click action
+	event.preventDefault();
+	
 	// Get jQuery object for the highlight box
 	var box = $(".nudge-box");
 	
 	// Warn and skip if item does not have an element id
 	if (event.target.id === "") {
 		
+		// Reset the target
+		_target = null;
+		
 		// Hide the highlight box
 		box.hide();
+		
 		return;
 	}
 	
@@ -95,9 +102,6 @@ function onClick(event) {
 	box.height(object.innerHeight());
 	
 	box.show();
-	
-	// Prevent default action
-	event.preventDefault();
 }
 
 function onKeyDown(event) {
