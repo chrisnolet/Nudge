@@ -1,0 +1,4 @@
+- Margin and padding adjustment options
+- Remove dependencies from Bootstrap and jQuery
+- Figure out key combinations which don't conflict with the natural behaviour of the browser
+- Add mouse drag-and-drop placements
