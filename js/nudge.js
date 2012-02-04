@@ -30,7 +30,7 @@ var _target = null;
 $(document).ready(function() {
 	
 	// Add Bootstrap
-	var bootstrap = '<link rel="stylesheet" href="https://raw.github.com/chrisnolet/Nudge/master/css/bootstrap.css"/>';
+	var bootstrap = '<link rel="stylesheet" href="https://raw.github.com/chrisnolet/Nudge/master/css/bootstrap.min.css"/>';
 	$('head').append(bootstrap);
 	
 	// Add topbar
