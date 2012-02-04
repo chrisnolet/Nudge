@@ -19,6 +19,7 @@
  *  
  */
 
+
 // JavaScript functions for the Nudge toolbar
 
 // Global variables
@@ -77,7 +78,7 @@ function onClick(event) {
 	// Warn and skip if item does not have an element id
 	if (event.target.id === "") {
 		
-		// Hide the hightlight box
+		// Hide the highlight box
 		box.hide();
 		return;
 	}
@@ -140,7 +141,7 @@ function onKeyDown(event) {
 			return;
 	}
 	
-	// Reposition the hightlight box
+	// Reposition the highlight box
 	var box = $(".nudge-box");
 	
 	box.offset(object.position());
