@@ -1,6 +1,3 @@
-- Render output
-- Place the name of the <div> in the top left corner (position: fixed).
-- Margin and padding adjustment options
+- Render output to files
 - Remove dependencies from Bootstrap and jQuery
-- Figure out key combinations which don't conflict with the natural behaviour of the browser
 - Add mouse drag-and-drop placements
