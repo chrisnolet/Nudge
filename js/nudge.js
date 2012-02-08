@@ -169,7 +169,6 @@ function setMode(mode) {
 // Element clicked
 function onClick(event) {
 	
-	console.log(event.target.id);
 	// Skip and do nothing if element id begins with 'nudge-'
 	if (event.target.id.lastIndexOf('nudge-', 0) === 0) {
 		return;
@@ -230,6 +229,9 @@ function moveHightlightBox(object) {
 	
 	// 'Copy to Clipboard' clicked
 	$("#nudge-copy").click(function() {
+		
+		// Prevent default click action
+		e.preventDefault();
 		
 		// TODO(CN): Write copy code here.
 	});
