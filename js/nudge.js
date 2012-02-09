@@ -34,6 +34,7 @@ $(document).ready(function() {
 	// Add Bootstrap
 	//var bootstrap = '<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css"/>';
 	//var bootstrap = '<link rel="stylesheet" href="https://raw.github.com/chrisnolet/Nudge/master/css/bootstrap.css"/>';
+	
 	var bootstrap = '<link rel="stylesheet" href="https://skiggle.com.au/files/bootstrap.css"/>';
 	$("head").append(bootstrap);
 	
@@ -311,24 +312,26 @@ function onKeyDown(event) {
 		
 		// Resize-left key
 		case 74:
-			object.css("width", "-=" + (speedModifier ? 10 : 1));
+			//object.css("width", "-=" + (speedModifier ? 10 : 1));
+			object.width(object.outerWidth() - (speedModifier ? 10 : 1));
 			break;
 			
 		// Resize-up key
 		case 73:
-			object.css("height", "-=" + (speedModifier ? 10 : 1));
+			//object.css("height", "-=" + (speedModifier ? 10 : 1));
+			object.height(object.outerHeight() - (speedModifier ? 10 : 1));
 			break;
 			
 		// Resize-right key
 		case 76:
-			object.css("width", "+=" + (speedModifier ? 10 : 1));
-			console.log(object.css("width"));
-			console.log(object.innerWidth());
+			//object.css("width", "+=" + (speedModifier ? 10 : 1));
+			object.width(object.outerWidth() + (speedModifier ? 10 : 1));
 			break;
 			
 		// Resize-down key
 		case 75:
-			object.css("height", "+=" + (speedModifier ? 10 : 1));
+			//object.css("height", "+=" + (speedModifier ? 10 : 1));
+			object.height(object.outerHeight() + (speedModifier ? 10 : 1));
 			break;
 		
 		default:
