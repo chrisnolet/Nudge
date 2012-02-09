@@ -7,10 +7,11 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  * Date: Sat Nov 12 01:04:51 PST 2011
- */
-/* Reset.less
- * Props to Eric Meyer (meyerweb.com) for his CSS reset file. We're using an adapted version here	that cuts out some of the reset HTML elements we will never need here (i.e., dfn, samp, etc).
- * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+ *
+ * Stipped-down by Chris Nolet for use in Nudge.js.
+ * See http://twitter.guthub.com for the unaltered version
+ * ---------------------------------------------------------------------------- */
+
 .container {
   width: 940px;
   margin-left: auto;
@@ -25,21 +26,6 @@
 .container:after {
   clear: both;
 }
-.pull-right {
-  float: right;
-}
-.pull-left {
-  float: left;
-}
-.hide {
-  display: none;
-}
-.show {
-  display: block;
-}
-/* Patterns.less
- * Repeatable UI elements outside the base styles provided from the scaffolding
- * ---------------------------------------------------------------------------- */
 .topbar {
   height: 40px;
   position: fixed;

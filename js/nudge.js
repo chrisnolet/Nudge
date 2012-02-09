@@ -1,8 +1,10 @@
 "use strict";
 
-/*
+/*!
  *  Nudge
  *  Copyright (C) 2012 Skiggle Pty Ltd
+ *
+ *  Designed by Chris Nolet (@chrisnolet)
  *  
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -16,7 +18,6 @@
  *  
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *  
  */
 
 
@@ -67,7 +68,7 @@ $(document).ready(function() {
 	
 	// Add selection box
 	var box = '\
-		<div class="nudge-box" class="hide" style="\
+		<div class="nudge-box" style="\
 			position: absolute;\
 			margin: 0;\
 			padding: 0;\
@@ -75,6 +76,7 @@ $(document).ready(function() {
 			background-color: #8bb6dd;\
 			opacity: 0.5;\
 			z-index: 10000;\
+			display: none;\
 		">\
 			<p style="\
 				position: absolute;\
@@ -91,7 +93,7 @@ $(document).ready(function() {
 	
 	// Add output box
 	var output = '\
-		<div id="nudge-output" class="hide" style="\
+		<div id="nudge-output" style="\
 			position: fixed;\
 			margin: 0;\
 			padding: 8px;\
@@ -101,6 +103,7 @@ $(document).ready(function() {
 			background-color: #ddb68b;\
 			opacity: 0.5;\
 			z-index: 100000;\
+			display: none;\
 		">\
 			<p id="nudge-output-paragraph" style="\
 				margin: 0;\
