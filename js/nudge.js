@@ -191,6 +191,11 @@ function onClick(event) {
 		return;
 	}
 	
+	// Skip repeat events
+	if (event.target === _target) {
+		return;
+	}
+	
 	// Prevent default click action
 	event.preventDefault();
 	
@@ -257,12 +262,10 @@ function cssWidth(object) {
 	// Restore the object to its original size
 	object.css("width", "-=" + (2 * fudge));
 	
-	// Return the correct width
+	// Return the width or the inner width accordingly
 	if (fudge == 0) {
-		console.log("normal");
 		return object.width();
 	} else {
-		console.log("fudge");
 		return object.innerWidth();
 	}
 }
@@ -277,12 +280,10 @@ function cssHeight(object) {
 	// Restore the object to its original size
 	object.css("height", "-=" + (2 * fudge));
 	
-	// Return the correct width
+	// Return the width or the inner width accordingly
 	if (fudge == 0) {
-		console.log("normal");
 		return object.height();
 	} else {
-		console.log("fudge");
 		return object.innerHeight();
 	}
 }
