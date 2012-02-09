@@ -238,13 +238,10 @@ function moveHightlightBox(object) {
 		+ "&nbsp;&nbsp;&nbsp; padding-top: " + object.css("padding-top") + ";<br/>"
 		+ "&nbsp;&nbsp;&nbsp; left: " + object.css("left") + ";<br/>"
 		+ "&nbsp;&nbsp;&nbsp; top: " + object.css("top") + ";<br/>"
-		+ "&nbsp;&nbsp;&nbsp; width: " + object.width() + "px;<br/>"
-		+ "&nbsp;&nbsp;&nbsp; height: " + object.width() + "px;<br/>"
+		+ "&nbsp;&nbsp;&nbsp; width: " + object.innerWidth() + "px;<br/>"
+		+ "&nbsp;&nbsp;&nbsp; height: " + object.innerHeight() + "px;<br/>"
 		+ "}<br/><br/>"
 	);
-	
-	console.log(object.innerWidth());
-	console.log(object.width());
 	
 	// Return the jQuery object for chaining
 	return box;
