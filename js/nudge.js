@@ -243,6 +243,11 @@ function moveHightlightBox(object) {
 		+ "}<br/><br/>"
 	);
 	
+	console.log("Inner:" + object.innerWidth());
+	console.log("Outer:" + object.outerWidth());
+	console.log("Width:" + object.width());
+	console.log("CSS W:" + object.css("width"));
+	
 	// Return the jQuery object for chaining
 	return box;
 }
