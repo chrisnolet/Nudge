@@ -31,8 +31,9 @@ var _mode = "position";
 $(document).ready(function() {
 	
 	// Add Bootstrap
-	//var bootstrap = '<link rel="stylesheet" href="https://raw.github.com/chrisnolet/Nudge/master/css/bootstrap.min.css"/>';
-	var bootstrap = '<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css"/>';
+	//var bootstrap = '<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css"/>';
+	//var bootstrap = '<link rel="stylesheet" href="https://raw.github.com/chrisnolet/Nudge/master/css/bootstrap.css"/>';
+	var bootstrap = '<link rel="stylesheet" href="https://skiggle.com.au/files/bootstrap.css"/>';
 	$("head").append(bootstrap);
 	
 	// Add topbar
