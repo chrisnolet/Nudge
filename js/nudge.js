@@ -93,20 +93,26 @@ $(document).ready(function() {
 		<div id="nudge-output" class="hide" style="\
 			position: fixed;\
 			margin: 0;\
-			padding: 0;\
+			padding: 8px;\
 			top: 40px;\
 			right: 0;\
-			border: 1px solid #00f;\
-			background-color: #8bb6dd;\
+			border: 1px solid #f00;\
+			background-color: #ddb68b;\
 			opacity: 0.5;\
 			z-index: 100000;\
 		">\
 			<p id="nudge-output-paragraph" style="\
 				margin: 0;\
-				padding: 8px;\
+				padding: 0;\
 				font: 13px Monaco, \'Lucida Console\', \'Courier New\', monospace, sans-serif;\
-				color: #005;\
+				color: #500;\
 			"></p>\
+			<a id="nudge-select-all" href="#" style="\
+				margin: 0;\
+				padding: 0;\
+				font: 13px Monaco, \'Lucida Console\', \'Courier New\', monospace, sans-serif;\
+				color: #500;\
+			">Select All</a>\
 		</div>\
 	';
 	$('body').append(output);
@@ -143,6 +149,12 @@ $(document).ready(function() {
 	$("#nudge-inherit").click(function(e) {
 		e.preventDefault();
 		mode(1);
+	});
+	
+	// 'Select All' action
+	$("#nudge-select-all").click(function(e) {
+		e.preventDefault();
+		selectText("nudge-output-paragraph");
 	});
 	
 	// Attach click handler
@@ -224,17 +236,7 @@ function moveHightlightBox(object) {
 		+ "&nbsp;&nbsp;&nbsp; width: " + object.css("width") + ";<br/>"
 		+ "&nbsp;&nbsp;&nbsp; height: " + object.css("height") + ";<br/>"
 		+ "}<br/><br/>"
-		+ '<a id="nudge-copy" href="#" style="color: #005;">Copy to clipboard</a>'
 	);
-	
-	// 'Copy to Clipboard' clicked
-	$("#nudge-copy").click(function() {
-		
-		// Prevent default click action
-		e.preventDefault();
-		
-		// TODO(CN): Write copy code here.
-	});
 	
 	// Return the jQuery object for chaining
 	return box;
@@ -329,6 +331,33 @@ function onKeyDown(event) {
 	
 	// Reposition the highlight box
 	moveHightlightBox(object);
+}
+
+// Select text
+function selectText(id) {
+	
+	// Note: Borrowed from 'http://stackoverflow.com/questions/985272'
+	
+	// Get the text element from the element id
+	var text = document.getElementById(id);
+	
+	// Select the text element
+	if (document.body.createTextRange) {
+		
+		// Microsoft IE
+		var range = document.body.createTextRange();
+		range.moveToElementText(text);
+		range.select();
+		
+	} else if (window.getSelection) {
+		
+		//  Safari, Chrome, Firefox and Opera
+		var selection = window.getSelection();
+		var range = document.createRange();
+		range.selectNodeContents(text);
+		selection.removeAllRanges();
+		selection.addRange(range);
+	}
 }
 
 
