@@ -318,25 +318,25 @@ function onKeyDown(event) {
 		// Resize-left key
 		case 74:
 			//object.css("width", "-=" + (speedModifier ? 10 : 1));
-			object.width(object.outerWidth() - (speedModifier ? 10 : 1));
+			object.width(object.innerWidth() - (speedModifier ? 10 : 1));
 			break;
 			
 		// Resize-up key
 		case 73:
 			//object.css("height", "-=" + (speedModifier ? 10 : 1));
-			object.height(object.outerHeight() - (speedModifier ? 10 : 1));
+			object.height(object.innerWidth() - (speedModifier ? 10 : 1));
 			break;
 			
 		// Resize-right key
 		case 76:
 			//object.css("width", "+=" + (speedModifier ? 10 : 1));
-			object.width(object.outerWidth() + (speedModifier ? 10 : 1));
+			object.width(object.innerWidth() + (speedModifier ? 10 : 1));
 			break;
 			
 		// Resize-down key
 		case 75:
 			//object.css("height", "+=" + (speedModifier ? 10 : 1));
-			object.height(object.outerHeight() + (speedModifier ? 10 : 1));
+			object.height(object.innerWidth() + (speedModifier ? 10 : 1));
 			break;
 		
 		default:
