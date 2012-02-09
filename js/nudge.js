@@ -322,6 +322,8 @@ function onKeyDown(event) {
 		// Resize-right key
 		case 76:
 			object.css("width", "+=" + (speedModifier ? 10 : 1));
+			console.log(object.css("width"));
+			console.log(object.innerWidth());
 			break;
 			
 		// Resize-down key
