@@ -238,8 +238,8 @@ function moveHightlightBox(object) {
 		+ "&nbsp;&nbsp;&nbsp; padding-top: " + object.css("padding-top") + ";<br/>"
 		+ "&nbsp;&nbsp;&nbsp; left: " + object.css("left") + ";<br/>"
 		+ "&nbsp;&nbsp;&nbsp; top: " + object.css("top") + ";<br/>"
-		+ "&nbsp;&nbsp;&nbsp; width: " + object.css("width") + ";<br/>"
-		+ "&nbsp;&nbsp;&nbsp; height: " + object.css("height") + ";<br/>"
+		+ "&nbsp;&nbsp;&nbsp; width: " + object.innerWidth() + "px;<br/>"
+		+ "&nbsp;&nbsp;&nbsp; height: " + object.innerHeight() + "px;<br/>"
 		+ "}<br/><br/>"
 	);
 	
