@@ -238,8 +238,8 @@ function moveHightlightBox(object) {
 		+ "&nbsp;&nbsp;&nbsp; padding-top: " + object.css("padding-top") + ";<br/>"
 		+ "&nbsp;&nbsp;&nbsp; left: " + object.css("left") + ";<br/>"
 		+ "&nbsp;&nbsp;&nbsp; top: " + object.css("top") + ";<br/>"
-		+ "&nbsp;&nbsp;&nbsp; width: " + width(object) + ";<br/>"
-		+ "&nbsp;&nbsp;&nbsp; height: " + height(object) + ";<br/>"
+		+ "&nbsp;&nbsp;&nbsp; width: " + cssWidth(object) + "px;<br/>"
+		+ "&nbsp;&nbsp;&nbsp; height: " + cssHeight(object) + "px;<br/>"
 		+ "}<br/><br/>"
 	);
 	
@@ -247,14 +247,14 @@ function moveHightlightBox(object) {
 	return box;
 }
 
-function width(object) {
+function cssWidth(object) {
 	
-	// See if the object shifts when adding a zero width
+	// See if the object resizes with a 'fudge' factor
 	var start = object.width();
 	object.css("width", "+=0");
 	var fudge = object.width() - start;
 	
-	// Restore the object to its original position
+	// Restore the object to its original size
 	object.css("width", "-=" + (2 * fudge));
 	
 	// Return the correct width
@@ -267,14 +267,14 @@ function width(object) {
 	}
 }
 
-function height(object) {
+function cssHeight(object) {
 	
-	// See if the object shifts when adding a zero width
+	// See if the object resizes with a 'fudge' factor
 	var start = object.height();
 	object.css("height", "+=0");
 	var fudge = object.height() - start;
 	
-	// Restore the object to its original position
+	// Restore the object to its original size
 	object.css("height", "-=" + (2 * fudge));
 	
 	// Return the correct width
@@ -352,22 +352,22 @@ function onKeyDown(event) {
 		
 		// Resize-left key
 		case 74:
-			object.css("width", width(object) - (speedModifier ? 10 : 1));
+			object.css("width", cssWidth(bject) - (speedModifier ? 10 : 1));
 			break;
 			
 		// Resize-up key
 		case 73:
-			object.css("height", height(object) - (speedModifier ? 10 : 1));
+			object.css("height", cssHeight(object) - (speedModifier ? 10 : 1));
 			break;
 			
 		// Resize-right key
 		case 76:
-			object.css("width", width(object) + (speedModifier ? 10 : 1));
+			object.css("width", cssWidth(object) + (speedModifier ? 10 : 1));
 			break;
 			
 		// Resize-down key
 		case 75:
-			object.css("height", height(object) + (speedModifier ? 10 : 1));
+			object.css("height", cssHeight(object) + (speedModifier ? 10 : 1));
 			break;
 		
 		default:
