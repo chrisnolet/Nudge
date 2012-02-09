@@ -238,15 +238,10 @@ function moveHightlightBox(object) {
 		+ "&nbsp;&nbsp;&nbsp; padding-top: " + object.css("padding-top") + ";<br/>"
 		+ "&nbsp;&nbsp;&nbsp; left: " + object.css("left") + ";<br/>"
 		+ "&nbsp;&nbsp;&nbsp; top: " + object.css("top") + ";<br/>"
-		+ "&nbsp;&nbsp;&nbsp; width: " + object.innerWidth() + "px;<br/>"
-		+ "&nbsp;&nbsp;&nbsp; height: " + object.innerHeight() + "px;<br/>"
+		+ "&nbsp;&nbsp;&nbsp; width: " + object.css("width") + ";<br/>"
+		+ "&nbsp;&nbsp;&nbsp; height: " + object.css("height") + ";<br/>"
 		+ "}<br/><br/>"
 	);
-	
-	console.log("Inner:" + object.innerWidth());
-	console.log("Outer:" + object.outerWidth());
-	console.log("Width:" + object.width());
-	console.log("CSS W:" + object.css("width"));
 	
 	// Return the jQuery object for chaining
 	return box;
@@ -317,31 +312,38 @@ function onKeyDown(event) {
 		
 		// Resize-left key
 		case 74:
-			//object.css("width", "-=" + (speedModifier ? 10 : 1));
-			//object.width(object.innerWidth() - (speedModifier ? 10 : 1));
-			_target.style.width = parseInt(_target.style.width) - (speedModifier ? 10 : 1) + "px";
-			console.log(_target.style.width);
+			var start = object.width();
+			object.css("width", "+=0");
+			var fudge = object.width() - start;
+			
+			object.css("width", "-=" + ((speedModifier ? 10 : 1) + 2 * fudge));
 			break;
 			
 		// Resize-up key
 		case 73:
-			//object.css("height", "-=" + (speedModifier ? 10 : 1));
-			//object.height(object.innerWidth() - (speedModifier ? 10 : 1));
-			_target.style.height = parseInt(_target.style.height) - (speedModifier ? 10 : 1) + "px";
+			var start = object.height();
+			object.css("height", "+=0");
+			var fudge = object.height() - start;
+			
+			object.css("height", "-=" + ((speedModifier ? 10 : 1) + 2 * fudge));
 			break;
 			
 		// Resize-right key
 		case 76:
-			//object.css("width", "+=" + (speedModifier ? 10 : 1));
-			//object.width(object.innerWidth() + (speedModifier ? 10 : 1));
-			_target.style.width = parseInt(_target.style.width) + (speedModifier ? 10 : 1) + "px";
+			var start = object.width();
+			object.css("width", "+=0");
+			var fudge = object.width() - start;
+			
+			object.css("width", "+=" + ((speedModifier ? 10 : 1) - 2 * fudge));
 			break;
 			
 		// Resize-down key
 		case 75:
-			//object.css("height", "+=" + (speedModifier ? 10 : 1));
-			//object.height(object.innerWidth() + (speedModifier ? 10 : 1));
-			_target.style.height = parseInt(_target.style.height) + (speedModifier ? 10 : 1) + "px";
+			var start = object.height();
+			object.css("height", "+=0");
+			var fudge = object.height() - start;
+			
+			object.css("height", "+=" + ((speedModifier ? 10 : 1) - 2 * fudge));
 			break;
 		
 		default:
