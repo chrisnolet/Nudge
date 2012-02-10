@@ -191,13 +191,13 @@ function onClick(event) {
 		return;
 	}
 	
-	// Skip repeat events
+	// Prevent default click action
+	event.preventDefault();
+	
+	// Skip repeated events
 	if (event.target === _target) {
 		return;
 	}
-	
-	// Prevent default click action
-	event.preventDefault();
 	
 	// Warn and skip if item does not have an element id
 	if (event.target.id === "") {
@@ -263,7 +263,7 @@ function cssWidth(object) {
 	object.css("width", "-=" + (2 * fudge));
 	
 	// Return the width or the inner width accordingly
-	if (fudge == 0) {
+	if (fudge === 0) {
 		return object.width();
 	} else {
 		return object.innerWidth();
@@ -281,7 +281,7 @@ function cssHeight(object) {
 	object.css("height", "-=" + (2 * fudge));
 	
 	// Return the width or the inner width accordingly
-	if (fudge == 0) {
+	if (fudge === 0) {
 		return object.height();
 	} else {
 		return object.innerHeight();
