@@ -353,7 +353,7 @@ function onKeyDown(event) {
 		
 		// Resize-left key
 		case 74:
-			object.css("width", cssWidth(bject) - (speedModifier ? 10 : 1));
+			object.css("width", cssWidth(object) - (speedModifier ? 10 : 1));
 			break;
 			
 		// Resize-up key
