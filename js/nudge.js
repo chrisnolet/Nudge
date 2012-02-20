@@ -196,7 +196,7 @@ function onClick(event) {
 	
 	// Skip repeated events
 	if (event.target === _target) {
-		return;
+		//return;
 	}
 	
 	// Warn and skip if item does not have an element id
