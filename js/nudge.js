@@ -196,7 +196,7 @@ function onClick(event) {
 	
 	// Skip repeated events
 	if (event.target === _target) {
-		//return;
+		return;
 	}
 	
 	// Warn and skip if item does not have an element id
@@ -228,8 +228,10 @@ function moveHightlightBox(object) {
 	// Get jQuery object for the highlight box
 	var box = $(".nudge-box");
 	
-	console.log(object.offset());
-	box.offset(object.offset());
+	box.offset({
+		left: object.css("left"),
+		top: object.css("top")
+	});
 	box.width(object.innerWidth());
 	box.height(object.innerHeight());
 	
