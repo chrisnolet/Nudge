@@ -229,6 +229,8 @@ function moveHightlightBox(object) {
 	var box = $(".nudge-box");
 	
 	box.offset(object.offset());
+	box.offset(object.offset());
+	box.offset(object.offset());
 	box.width(object.innerWidth());
 	box.height(object.innerHeight());
 	
