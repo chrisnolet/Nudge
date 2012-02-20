@@ -225,12 +225,14 @@ function onClick(event) {
 
 function moveHightlightBox(object) {
 	
+	// Get actual element width and height
+	var width = cssWidth(object);
+	var height = cssHeight(object);
+	
 	// Get jQuery object for the highlight box
 	var box = $(".nudge-box");
 	
-	box.offset(object.offset());
-	box.offset(object.offset());
-	box.offset(object.offset());
+	box.css(object.offset());
 	box.width(object.innerWidth());
 	box.height(object.innerHeight());
 	
@@ -245,8 +247,8 @@ function moveHightlightBox(object) {
 		+ "&nbsp;&nbsp;&nbsp; padding-top: " + object.css("padding-top") + ";<br/>"
 		+ "&nbsp;&nbsp;&nbsp; left: " + object.css("left") + ";<br/>"
 		+ "&nbsp;&nbsp;&nbsp; top: " + object.css("top") + ";<br/>"
-		+ "&nbsp;&nbsp;&nbsp; width: " + cssWidth(object) + "px;<br/>"
-		+ "&nbsp;&nbsp;&nbsp; height: " + cssHeight(object) + "px;<br/>"
+		+ "&nbsp;&nbsp;&nbsp; width: " + width + "px;<br/>"
+		+ "&nbsp;&nbsp;&nbsp; height: " + height + "px;<br/>"
 		+ "}<br/><br/>"
 	);
 	
