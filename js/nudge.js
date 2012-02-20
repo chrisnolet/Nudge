@@ -228,6 +228,7 @@ function moveHightlightBox(object) {
 	// Get jQuery object for the highlight box
 	var box = $(".nudge-box");
 	
+	console.log(object.offset());
 	box.offset(object.offset());
 	box.width(object.innerWidth());
 	box.height(object.innerHeight());
