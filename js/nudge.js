@@ -233,8 +233,8 @@ function moveHightlightBox(object) {
 	var box = $(".nudge-box");
 	
 	box.css(object.offset());
-	box.width(object.innerWidth());
-	box.height(object.innerHeight());
+	box.width(object.innerWidth() - 2);
+	box.height(object.innerHeight() - 2);
 	
 	// Set the label text
 	//$(".nudge-box > p").html("<b>#" + _target.id + "</b> (" + object.innerWidth() + ", " + object.innerHeight() + ")");
