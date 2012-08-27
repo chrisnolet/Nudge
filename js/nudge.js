@@ -65,7 +65,7 @@ $(document).ready(function() {
 			</div>\
 		</div>\
 	';
-	$("body").append(topbar).dropdown();
+	// $("body").append(topbar).dropdown(); // Topbar is no longer in use
 	
 	// Add selection box
 	var box = '\
@@ -98,8 +98,8 @@ $(document).ready(function() {
 			position: fixed;\
 			margin: 0;\
 			padding: 8px;\
-			top: 40px;\
-			right: 0;\
+			top: -1px;\
+			right: -1px;\
 			border: 1px solid #f00;\
 			background-color: #ddb68b;\
 			opacity: 0.5;\
@@ -233,18 +233,18 @@ function moveHightlightBox(object) {
 	var box = $(".nudge-box");
 	
 	box.css(object.offset());
-	box.width(object.innerWidth() - 2);
-	box.height(object.innerHeight() - 2);
+	box.width(object.innerWidth());
+	box.height(object.innerHeight());
 	
 	// Set the label text
 	//$(".nudge-box > p").html("<b>#" + _target.id + "</b> (" + object.innerWidth() + ", " + object.innerHeight() + ")");
 	
 	// Set the output text
 	$("#nudge-output > p").html("<b>#" + _target.id + "</b> {<br/>"
-		+ "&nbsp;&nbsp;&nbsp; margin-left: " + object.css("margin-left") + ";<br/>"
-		+ "&nbsp;&nbsp;&nbsp; margin-top: " + object.css("margin-top") + ";<br/>"
-		+ "&nbsp;&nbsp;&nbsp; padding-left: " + object.css("padding-left") + ";<br/>"
-		+ "&nbsp;&nbsp;&nbsp; padding-top: " + object.css("padding-top") + ";<br/>"
+		// + "&nbsp;&nbsp;&nbsp; margin-left: " + object.css("margin-left") + ";<br/>"
+		// + "&nbsp;&nbsp;&nbsp; margin-top: " + object.css("margin-top") + ";<br/>"
+		// + "&nbsp;&nbsp;&nbsp; padding-left: " + object.css("padding-left") + ";<br/>"
+		// + "&nbsp;&nbsp;&nbsp; padding-top: " + object.css("padding-top") + ";<br/>"
 		+ "&nbsp;&nbsp;&nbsp; left: " + object.css("left") + ";<br/>"
 		+ "&nbsp;&nbsp;&nbsp; top: " + object.css("top") + ";<br/>"
 		+ "&nbsp;&nbsp;&nbsp; width: " + width + "px;<br/>"
