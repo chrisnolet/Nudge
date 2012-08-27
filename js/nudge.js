@@ -245,10 +245,10 @@ function moveHightlightBox(object) {
 		// + "&nbsp;&nbsp;&nbsp; margin-top: " + object.css("margin-top") + ";<br/>"
 		// + "&nbsp;&nbsp;&nbsp; padding-left: " + object.css("padding-left") + ";<br/>"
 		// + "&nbsp;&nbsp;&nbsp; padding-top: " + object.css("padding-top") + ";<br/>"
-		+ "&nbsp;&nbsp;&nbsp; left: " + object.css("left") + ";<br/>"
-		+ "&nbsp;&nbsp;&nbsp; top: " + object.css("top") + ";<br/>"
-		+ "&nbsp;&nbsp;&nbsp; width: " + width + "px;<br/>"
-		+ "&nbsp;&nbsp;&nbsp; height: " + height + "px;<br/>"
+		+ "left: " + object.css("left") + ";<br/>"
+		+ "top: " + object.css("top") + ";<br/>"
+		+ "width: " + width + "px;<br/>"
+		+ "height: " + height + "px;<br/>"
 		+ "<br/>" // "}<br/><br/>"
 	);
 	
