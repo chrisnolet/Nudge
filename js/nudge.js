@@ -111,7 +111,7 @@ $(document).ready(function() {
 				padding: 0;\
 				font: 13px Monaco, \'Lucida Console\', \'Courier New\', monospace, sans-serif;\
 				color: #500;\
-			"></p><br/>\
+			"></p><br/><br/>\
 			<a id="nudge-select-all" href="#" style="\
 				margin: 0;\
 				padding: 0;\
@@ -248,7 +248,7 @@ function moveHightlightBox(object) {
 		+ "left: " + object.css("left") + ";<br/>"
 		+ "top: " + object.css("top") + ";<br/>"
 		+ "width: " + width + "px;<br/>"
-		+ "height: " + height + "px;<br/>"
+		+ "height: " + height + "px;"
 		// + "}<br/><br/>"
 	);
 	
