@@ -249,7 +249,7 @@ function moveHightlightBox(object) {
 		+ "top: " + object.css("top") + ";<br/>"
 		+ "width: " + width + "px;<br/>"
 		+ "height: " + height + "px;<br/>"
-		+ "}<br/><br/>"
+		// + "}<br/><br/>"
 	);
 	
 	// Return the jQuery object for chaining
