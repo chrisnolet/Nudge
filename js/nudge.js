@@ -240,7 +240,7 @@ function moveHightlightBox(object) {
 	//$(".nudge-box > p").html("<b>#" + _target.id + "</b> (" + object.innerWidth() + ", " + object.innerHeight() + ")");
 	
 	// Set the output text
-	$("#nudge-output > p").html("" //"<b>#" + _target.id + "</b> {<br/>"
+	$("#nudge-output > p").html("" // "<b>#" + _target.id + "</b> {<br/>"
 		// + "&nbsp;&nbsp;&nbsp; margin-left: " + object.css("margin-left") + ";<br/>"
 		// + "&nbsp;&nbsp;&nbsp; margin-top: " + object.css("margin-top") + ";<br/>"
 		// + "&nbsp;&nbsp;&nbsp; padding-left: " + object.css("padding-left") + ";<br/>"
@@ -249,7 +249,7 @@ function moveHightlightBox(object) {
 		+ "&nbsp;&nbsp;&nbsp; top: " + object.css("top") + ";<br/>"
 		+ "&nbsp;&nbsp;&nbsp; width: " + width + "px;<br/>"
 		+ "&nbsp;&nbsp;&nbsp; height: " + height + "px;<br/>"
-		// + "}<br/><br/>"
+		+ "<br/>" // "}<br/><br/>"
 	);
 	
 	// Return the jQuery object for chaining
