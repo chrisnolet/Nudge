@@ -1,3 +1,18 @@
+To use, simply add the Nudge script to your HTML head:
+
+  <script src="https://raw.github.com/chrisnolet/Nudge/master/js/nudge.js"></script>
+
+Reload your page. You can now click on any element that has an #id.
+
+To move elements, use the E, D, S and F keys.
+To resize elements, use the I, K, J and L keys.
+
+Use the Shift key to move and resize by 10 pixels at a time.
+
+
+
+Nudge is distributed under the GNU General Public License licence.
+
 Nudge
 Copyright (C) 2012 Skiggle Pty Ltd
 
